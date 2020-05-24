@@ -1,0 +1,20 @@
+{
+  "params":
+  {
+    "local_server":"True",
+    "local_uri": "mysql://root:@localhost/be_happy",
+    "prod_uri":"mysql://root:@localhost/be_happy",
+    "fb_url":"https://www.facebook.com/jitu.shewale.146",
+    "tw_url":"https://twitter.com/ShewaleJitesh",
+    "gh_url": "https://github.com/Jitesh001",
+    "blog_name": "Be Happy",
+    "tag_line": "Throw your pain away",
+    "gmail-user":"jiteshshewale40@gmail.com",
+    "gmail-password":"Jitesh@2222",
+    "no_of_posts": 3,
+    "login_image":"login.svg",
+    "admin_user":"Jitesh",
+    "admin_password": "Jitesh4000",
+    "upload_location" : "F:\\Flask\\project2\\File"
+  }
+}

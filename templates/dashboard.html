@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block body %}
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home-bg.jpg') }}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Admin Pannel</h1>
+              <span class="subheading">Manage your posts and change them</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <h1>Basic action</h1>
+
+          <a href="/edit/0"><button class="btn btn-primary mb-2">ADD NEW POST</button></a>
+          <a href="/logout"><button class="btn btn-primary mb-2">LOGOUT</button></a>
+
+          <h1>Upload a file</h1>
+          
+          <form action = '/uploader' method = 'post' enctype="multipart/form-data">
+            <input type="file" name="file1">
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+          </form>
+
+          <hr>
+          <h1>Edit a file</h1>
+          <!-- Pager -->
+          <table style="width:100%; border-collapse: collapse;">
+              <tr>
+                <th>Sno</th>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+              {% for post in posts %}
+              <tr>
+                <td>{{post.sno}}</td>
+                <td>{{post.title}}</td>
+                <td>{{post.date}}</td>
+                <td><a href="/edit/{{post.sno}}"><button class="btn btn-primary mb-2">Edit</button></a></td>
+                <td><a href="/delete/{{post.sno}}"><button class="btn btn-primary mb-2">Delete</button></a></td>
+              </tr>
+              {% endfor %}
+        </table><br>
+          
+<!-- Pager -->
+          <div class="clearfix">
+        
+            <a class="btn btn-primary float-left" href="{{prev}}">&larr;Previous </a>
+            
+            <a class="btn btn-primary float-right" href="{{next}}">Next &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    {% endblock %}

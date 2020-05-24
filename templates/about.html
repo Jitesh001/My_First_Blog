@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block body %}
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/about-bg.jpg') }}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>About Me</h1>
+              <span class="subheading">This is what I do.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>Hey there, My name is Jitesh Shewale and I am full time learner. If i talk about my college life I am currently studying in RAIT college Nerul, Navi-Mumbai. There are many things I like. I am good reader and I like to watch movies ans series, I love music and sometime I sing. I am totally away from dance but I do like to watch it. I am curious about life, cosmos, galaxies and the whole world how all works. So Let's find the purpose of our lives through this Blog page.
+          </p>
+        </div>
+      </div>
+    </div>
+
+   {% endblock %}
